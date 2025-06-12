@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}SiloGuard - Nick Menough{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="introduction-section text-center">
+            <img src="/static/img/logo1.png" alt="SiloGuard Logo" class="img-fluid mb-4" style="max-width: 150px;">
+            <h1 class="text-center mb-5">SiloGuard: Revolutionizing Grain Bin Monitoring</h1>
+        </div>    
+
+        <!-- Introduction Section -->
+        <div class="mb-5">
+            <h2 class="hover-effect-title">
+                <i class="fas fa-info-circle text-primary"></i> Introduction
+            </h2>
+            <p>
+                SiloGuard is an innovative solution for modern agricultural challenges, focusing on real-time monitoring of grain bin conditions. 
+                Leveraging cutting-edge technology, SiloGuard allows farmers to make data-driven decisions about the state of their grain bins, 
+                preventing spoilage and optimizing grain storage. This solution integrates real-time temperature and moisture monitoring, 
+                ensuring that storage conditions remain optimal at all times.
+            </p>
+        </div>
+
+        <!-- Design Process Section -->
+        <div class="mb-5">
+            <h2 class="hover-effect-title">
+                <i class="fas fa-cogs text-primary"></i> Design Process
+            </h2>
+            <p>
+                The SiloGuard design process was driven by a clear need to optimize the efficiency and accuracy of grain bin monitoring. 
+                Initial user research highlighted the challenges faced by farmers, such as the inability to easily access grain conditions remotely 
+                and the time-consuming nature of manual inspections. 
+            </p>
+        </div>
+
+        <!-- 3D Visualization Section -->
+        <div class="mb-5">
+            <h2 class="hover-effect-title">
+                <i class="fas fa-cube text-primary"></i> 3D Visualization
+            </h2>
+            <p>
+                SiloGuard features an advanced 3D visualization of the grain bin system, allowing users to see real-time sensor data 
+                displayed in an intuitive and interactive format. This 3D model highlights problem areas, showing temperature and 
+                moisture levels across different sections of the bin, enabling farmers to pinpoint potential issues instantly.
+            </p>
+            <!-- Embedded 3D model of the grain bin -->
+            <div class="text-center">
+                <model-viewer src="/static/img/silo.glb" alt="3D model of Grain Bin" auto-rotate camera-controls ar></model-viewer>
+
+
+            </div>
+        </div>
+
+        <!-- Wireframes Section -->
+        <div class="mb-5">
+            <h2 class="hover-effect-title">
+                <i class="fas fa-pencil-ruler text-primary"></i> Prototype
+            </h2>
+            <p>
+                The python and Three.js prototype below showcase the core functionality of the SiloGuard system, from the dashboard to real-time monitoring views.
+                We focused on clear, simple visual cues and real-time data that would allow farmers to make quick decisions. Explore 
+                the full interactive prototype through the link below.
+            </p>
+            <div class="mt-3 text-center">
+                <a href="https://hci584.pythonanywhere.com/" target="_blank" class="btn btn-primary">View Prototype</a>
+            </div>
+        </div>
+
+        <!-- Storyboard Section -->
+        <div class="mb-5">
+            <h2 class="hover-effect-title">
+                <i class="fas fa-book text-primary"></i> Silo & Sensor Design
+            </h2>
+            <p>
+                The desgin & sitemap demonstrates the entire user flow, starting from the initial login to interacting with real-time grain bin data 
+                and alerts. Our storyboard process helped ensure that the user experience remained central to the SiloGuard design, ensuring that 
+                all features are accessible, usable, and highly intuitive.
+            </p>
+            <div class="mt-3 text-center">
+                <a href="/static/img/siloguard.pdf" target="_blank" class="btn btn-secondary">View Storyboard (PDF)</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+{% endblock %}

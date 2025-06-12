@@ -1,0 +1,370 @@
+/* Base layout styling */
+body {
+    font-family: "Muli", sans-serif;
+}
+
+#wrapper {
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+#sidebar-wrapper {
+    width: 250px;
+    height: 100vh;
+    background-color: #002f6c;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 0;
+    overflow: hidden;
+}
+
+#page-content-wrapper {
+    flex: 1;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Centered Text for navbar */
+.navbar-text {
+    margin: 0 auto;
+}
+
+#menu-toggle {
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #007bff;
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+}
+
+/* Projects Section */
+.projects-section h2 {
+    font-size: 2.5rem;
+    color: #002f6c;
+    margin-bottom: 2rem;
+}
+
+/* Card Styling */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 2px solid #007bff;
+    transform: translateY(-10px);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.card-body {
+    text-align: center;
+    padding: 15px;
+}
+
+/* Dropdown styling */
+.dropdown-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dropdown-container select {
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+#project-explore-btn {
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .card {
+        margin-bottom: 1.5rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+/* Adjust the size of images inside the carousel */
+.carousel-inner img {
+    max-width: 100%;
+    max-height: 300px; /* Adjust this value to your preference */
+    object-fit: contain; /* Ensures the image is contained within the defined area */
+}
+.hover-effect-title {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.hover-effect-title:hover {
+    color: #ffcc00; /* Change title color on hover */
+    transform: scale(1.1); /* Slightly increase the size of the text */
+}
+
+.hover-effect-title::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff; /* Blue underline */
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.hover-effect-title:hover::after {
+    visibility: visible;
+    width: 100%;
+}
+.hover-effect-title {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-effect-title:hover {
+    color: #ffcc00; /* Change title color on hover */
+    transform: scale(1.1); /* Slightly increase the size of the text */
+}
+
+.hover-effect-title::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff; /* Blue underline */
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.hover-effect-title:hover::after {
+    visibility: visible;
+    width: 100%;
+}
+
+/* Ensure button styles are consistent */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+/* Ensure buttons are consistently colored */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Adjust Introduction Section */
+.introduction-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Ensure the content in the introduction section is centered */
+.introduction-section p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+
+/* Ensure buttons are consistently colored */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+/* Hover effect for title elements */
+.hover-effect-title {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-effect-title:hover {
+    color: #ffcc00; /* Change title color on hover */
+    transform: scale(1.1); /* Slightly increase the size of the text */
+}
+
+.hover-effect-title::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff; /* Blue underline */
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.hover-effect-title:hover::after {
+    visibility: visible;
+    width: 100%;
+}
+/* Remove underline and style dropdown items */
+.dropdown-menu .dropdown-item {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* Default color for dropdown text */
+}
+
+/* Change text color on hover for dropdown items */
+.dropdown-menu .dropdown-item:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+    color: #ffffff; /* Ensure text color remains visible on hover */
+}
+
+/* Remove the underline on the dropdown toggle link */
+.dropdown-toggle {
+    text-decoration: none; /* Remove underline for dropdown toggle */
+}
+
+/* Hover effect for dropdown toggle link */
+.dropdown-toggle:hover {
+    color: #ffcc00; /* Customize this color as needed */
+    background-color: transparent; /* Keep background transparent */
+}
+/* Resume Section Enhancements */
+.resume-section {
+    padding: 2rem 1rem;
+}
+
+.resume-section h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.resume-section .subheading {
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.resume-section .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.resume-section .lead {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.resume-section-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.resume-section-content h3 {
+    font-size: 1.2rem;
+}
+
+.resume-section-content .subheading {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.resume-section-content .text-muted {
+    font-size: 0.85rem;
+}
+
+/* List styling for job experience */
+.resume-section-content ul {
+    padding-left: 1.2rem;
+}
+
+.resume-section-content ul li {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .resume-section {
+        padding: 3rem 4rem;
+    }
+
+    .resume-section h1 {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+    .resume-section .subheading {
+        text-align: left;
+    }
+
+    .resume-section .lead {
+        font-size: 1.125rem;
+        text-align: left;
+    }
+
+    .resume-section-content h2 {
+        text-align: left;
+        font-size: 2rem;
+    }
+
+    .resume-section-content ul li {
+        font-size: 1rem;
+    }
+}

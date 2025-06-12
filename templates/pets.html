@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}petsARus - AR Pet Game{% endblock %}
+
+{% block content %}
+<style>
+    .custom-list {
+        list-style: none;
+        padding-left: 0;
+    }
+    .custom-list li {
+        position: relative;
+        padding-left: 2rem;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        color: #333;
+    }
+    .custom-list li::before {
+        content: "🐾";
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    @keyframes runDog {
+        0% { left: -100px; }
+        100% { left: 110%; }
+    }
+    .dog-run-wrapper {
+        position: relative;
+        height: 40px;
+        margin-top: -20px;
+    }
+    .dog-run {
+        position: absolute;
+        bottom: 0;
+        left: -100px;
+        width: 80px;
+        animation: runDog 14s linear infinite;
+        z-index: 0;
+    }
+    @media (max-width: 576px) {
+        video, img {
+            max-width: 90% !important;
+            height: auto;
+        }
+    }
+</style>
+
+<section class="py-5" style="background: linear-gradient(to right, #fdfbfb, #ebedee); position: relative;">
+    <div class="container text-center">
+        <img src="/static/img/pets2.png" alt="petsARus Logo" class="img-fluid mb-4" style="max-width: 180px;">
+        <h1 class="display-5 fw-bold" style="color: #e67e22;">petsARus: AR Pet Game for iOS & Android</h1>
+        <p class="lead text-dark">petsARus is a mobile AR game inspired by Nintendogs and Tamagotchi, where players care for digital pets in the real world using voice commands, touch interactions, and immersive animations. Designed to provide fun, comfort, and companionship anytime, anywhere.</p>
+        <p class="text-muted">This was a team project by <strong>David Tang, Nick Menough,</strong> and <strong>Lenet Ron</strong>, blending game design, Unity development, and UX research to create a delightful AR experience.</p>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6">
+                <a href="/static/img/petsARus.pdf" class="btn btn-secondary w-100" download>
+                    <i class="fas fa-file-pdf"></i> Download Project PDF
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="dog-run-wrapper">
+        <img src="/static/img/dog-running.gif" class="dog-run" alt="Running Dog Animation">
+    </div>
+</section>
+
+<section class="py-5" style="background-color: #fffaf5;">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: #e67e22;">What Makes petsARus Special?</h2>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <ul class="custom-list">
+                    <li>Choose starter pets: Iguana, Pug, German Shepherd, or Deer</li>
+                    <li>Use voice commands like "Sit", "Wiggle Tail", "Lay Down" with Google Speech-to-Text</li>
+                    <li>Touch toys and treats to interact with pets in real-time</li>
+                    <li>Fill affection meter to unlock confetti celebration and bond feedback</li>
+                </ul>
+            </div>
+            <div class="col-md-6 mb-3">
+                <ul class="custom-list">
+                    <li>Built for both Android and iOS using Unity & Vuforia</li>
+                    <li>Future: multiplayer pet park, social trading, and in-game economy</li>
+                    <li>Pet cosmetic customization with coins and collectibles</li>
+                    <li>Expandable modular system for events and updates</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p class="text-muted fst-italic">Follow your pawprints to a world where pets play back.</p>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container text-center">
+        <h2 class="text-primary mb-4">Storyboard Preview</h2>
+        <img src="/static/img/storyboard_pet.png" alt="petsARus Storyboard" class="img-fluid rounded shadow" style="max-width: 600px; width: 100%; height: auto;">
+    </div>
+</section>
+
+<section class="bg-white py-5">
+  <div class="container text-center">
+    <h2 class="text-primary mb-4">petsARus Game Demo</h2>
+    <div class="mx-auto" style="max-width: 700px;">
+      <div class="ratio ratio-16x9">
+        <iframe 
+          src="https://www.youtube.com/embed/uni43Jwoh30"
+          title="petsARus Demo Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen class="rounded shadow-sm">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

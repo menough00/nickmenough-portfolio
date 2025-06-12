@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block title %}SmartCart - Nick Menough{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <!-- Logo and Title Section -->
+        <div class="introduction-section text-center">
+            <img src="/static/img/smartcart.png" alt="SmartCart Logo" class="img-fluid mb-4" style="max-width: 150px;">
+            <h1 class="text-center mb-5">SmartCart: Enhancing the Grocery Shopping Experience</h1>
+        </div>
+
+        <!-- Problem Space Section -->
+        <div class="mb-5">
+            <h2 class="hover-effect-title">
+                <i class="fas fa-exclamation-circle text-primary"></i> Problem Space
+            </h2>
+            <p>
+                Grocery shopping, a fundamental aspect of everyday life, is frequently marred by inefficiencies that complicate what should be a straightforward process. Busy schedules, dietary restrictions, and the challenge of balancing health and cost-effective choices all contribute to a shopping experience that can feel overwhelming and time-consuming.
+            </p>
+            <p>
+                While technology has attempted to make this process easier—through online shopping apps and recipe sites—many of these solutions are fragmented, failing to offer a cohesive, personalized, and in-store experience.
+            </p>
+        </div>
+        <div class="mb-5">
+            <h2 class="hover-effect-title">
+                <i class="fas fa-book text-primary"></i>SmartCart Presentation
+            </h2>
+            <p>
+                SmartCart aims to make grocery shopping a more organized and enjoyable experience by streamlining the entire process—from planning to purchase and beyond. It addresses key issues such as inefficient store navigation, the challenge of meal planning for health, and managing budgets in the face of rising grocery costs.
+            </p>
+            <div class="mt-3 text-center">
+                <a href="/static/img/siloguard.pdf" target="_blank" class="btn btn-secondary"> View Presentation(PDF)</a>
+            </div>
+        </div>
+
+        <!-- Color Theme Section -->
+        <div class="mb-5 text">
+            <h2 class="hover-effect-title">
+                <i class="fas fa-palette text-primary"></i> Color Theme & Branding
+            </h2>
+            <p>
+                SmartCart’s visual identity is centered around a carefully chosen color theme and typography hierarchy that promote readability, brand recognition, and a cohesive look across screens. The primary color, a vibrant blue, conveys trust and innovation, making the app feel both professional and inviting.
+            </p>
+            <img src="/static/img/color.png" alt="Color Theme" class="img-fluid">
+        </div>
+        
+
+        <!-- Site Map Section -->
+        <div class="mb-5">
+            <h2 class="hover-effect-title">
+                <i class="fas fa-sitemap text-primary"></i> Site Map Overview
+            </h2>
+            <p>
+                SmartCart is an innovative grocery shopping assistant designed to streamline and enhance the shopping experience through AI-driven recommendations, AR-powered navigation, and a consistent design system.
+            </p>
+            <div class="mt-3 text-center">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; max-width: 800px; height: 450px;" src="https://embed.figma.com/design/LA4bHuDsbNTkmUns8A3muu/Site-Map-Smart-Grocery-Shopping-Assistant?node-id=18-209&embed-host=share" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Wireframe Section -->
+        <div class="mb-5">
+            <h2 class="hover-effect-title">
+                <i class="fas fa-pencil-alt text-primary"></i> Wireframe Overview
+            </h2>
+            <p>
+                The wireframes illustrate SmartCart’s user interface and highlight essential functionalities, focusing on creating an organized and efficient shopping journey. Explore the wireframe to see the app’s design approach and user flow.
+            </p>
+            <div class="mt-3 text-center">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/2rIYRD5bxo3bv2ATgy3pIs/SmartCart-Phone?page-id=0%3A1&node-id=1-5092&p=f&viewport=1017%2C1355%2C0.54&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A5092&embed-host=share" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Component Nomenclature & Architecture Section -->
+        <div class="mb-5">
+            <h2 class="hover-effect-title">
+                <i class="fas fa-layer-group text-primary"></i> Component Nomenclature & Architecture
+            </h2>
+            <p>
+                SmartCart’s design system follows the Atomic Design methodology, which organizes UI components into five levels: Atoms, Molecules, Organisms, Templates, and Pages. This modular approach enables scalability, consistency, and ease of maintenance.
+            </p>
+            <p>
+                Atoms are the foundational building blocks—small, standalone elements such as buttons, icons, and text inputs. These come together to form Molecules, like the Search Bar and Recipe Card, which serve as functional groups. Organisms, composed of multiple Molecules, perform essential tasks for the user, like the Header or Shopping List.
+            </p>
+        </div>
+
+        <!-- Atoms and Molecules Section -->
+        <div class="mb-5">
+            <h2 class="hover-effect-title">
+                <i class="fas fa-cube text-primary"></i> Atoms and Molecules - The Building Blocks
+            </h2>
+            <p>
+                The foundation of SmartCart’s interface lies in its Atoms and Molecules. Atoms are the smallest UI components, such as primary and secondary buttons, icons, and input fields, creating a cohesive look and feel.
+            </p>
+            <p>
+                Molecules are groups of Atoms that serve a specific purpose. For instance, the Search Bar combines a text input field and a search icon, while the Recipe Card includes an image, title, description, and action buttons for user interaction.
+            </p>
+        </div>
+
+        <!-- Organisms Section -->
+        <div class="mb-5">
+            <h2 class="hover-effect-title">
+                <i class="fas fa-cubes text-primary"></i> Organisms - Complex UI Components
+            </h2>
+            <p>
+                Organisms are more complex components that bring functionality to SmartCart by combining multiple Molecules. These elements allow users to interact with the app in meaningful ways.
+            </p>
+            <p>
+                The Header combines navigation links, the logo, and the profile icon, providing easy access to essential sections. The Shopping List categorizes items by type, with checkboxes for ease of use. Additionally, the AR Navigation Overlay uses real-time guidance to help users find items within the store.
+            </p>
+        </div>
+
+        <!-- Templates, Pages & AR Navigation Section -->
+        <div class="mb-5">
+            <h2 class="hover-effect-title">
+                <i class="fas fa-map text-primary"></i> Templates, Pages & AR Navigation - Structuring the User Experience
+            </h2>
+            <p>
+                Templates and Pages work together to create a structured and consistent user experience. Templates provide layouts that feel familiar and accessible, such as the Home Page Template with quick actions and personalized recommendations.
+            </p>
+            <p>
+                The AR Navigation feature enhances the experience by providing real-time item locations with aisle and row information and directional arrows guiding users to specific products. This creates an interactive and efficient in-store experience.
+            </p>
+        </div>
+
+        <!-- Conclusion Section -->
+        <div class="mb-5">
+            <h2 class="hover-effect-title">
+                <i class="fas fa-lightbulb text-primary"></i> Conclusion
+            </h2>
+            <p>
+                In conclusion, SmartCart combines a structured design system with advanced AI and AR technologies to redefine the grocery shopping experience. Each component, from Atoms to Pages, is crafted to create a seamless, intuitive user experience that extends from home to the grocery store.
+            </p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

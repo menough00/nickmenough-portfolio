@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+{% block meta %}
+<meta name="description" content="Prism AR is a smart glasses assistant designed by Nick Menough to reduce cognitive load during in-store shopping. Features include object detection, voice commands, and accessibility settings.">
+<meta name="keywords" content="Prism AR, smart glasses, AI assistant, AR shopping, UX research, Nick Menough, accessibility, HCI project">
+<meta name="author" content="Nick Menough">
+{% endblock %}
+
+
+{% block title %}Prism AR Capstone - Nick Menough{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container text-center">
+        <img src="/static/img/prismlogo.png" alt="Prism Logo" class="img-fluid mb-4" style="max-width: 200px;">
+        <h1 class="display-5">Prism: Dual-Platform AI Shopping Assistant</h1>
+        <p class="lead">Empowering smarter in-store decisions through real-time overlays, voice guidance, and accessibility-first design — on AR glasses <em>or</em> your smartphone.</p>
+        <div class="d-grid gap-2 d-md-block">
+            <a href="/static/img/Nicholas_Menough_Capstone_Project.pdf" class="btn btn-primary mt-2" download>
+                <i class="fas fa-file-pdf"></i> Download Full Capstone PDF
+            </a>
+            <a href="https://prismcapstone.pythonanywhere.com/" target="_blank" class="btn btn-outline-secondary mt-2">
+                <i class="fas fa-link"></i> View Live Prototype
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="timeline container">
+    <div class="timeline-item">
+        <h2 class="hover-effect-title"><i class="fas fa-exclamation-circle text-primary"></i> Problem</h2>
+        <p>Shoppers often experience cognitive overload while trying to compare products, access nutritional data, and find reviews—all while navigating a physical store. This is worsened for users with accessibility needs, such as visual impairments or neurodivergence. No existing tool provides real-time, inclusive decision-making support <em>in-person</em>.</p>
+    </div>
+
+    <div class="timeline-item">
+        <h2 class="hover-effect-title"><i class="fas fa-lightbulb text-primary"></i> Idea</h2>
+        <p>Prism bridges the physical-digital divide with a dual-platform assistant: wearable AR glasses and a mobile app. Both deliver product insights, comparisons, and AI-powered alternatives via visual overlays or audio — accessible hands-free or by voice.</p>
+    </div>
+
+    <div class="timeline-item">
+        <h2 class="hover-effect-title"><i class="fas fa-search text-primary"></i> Discover</h2>
+        <p>Through interviews and surveys with six diverse participants (P1–P6), three pain points emerged:</p>
+        <ul>
+            <li>🔄 Frequent interruptions to use phones during shopping</li>
+            <li>👁️ Lack of accessible support (e.g., small print, visual clutter)</li>
+            <li>🧠 High cognitive load while comparing products</li>
+        </ul>
+        <blockquote class="quote-box">
+            <p>“I want something hands-free that tells me what’s cheaper or healthier without making me stop everything.”</p>
+            <footer>– P2, Budget-Focused Shopper</footer>
+        </blockquote>
+    </div>
+
+    <div class="timeline-item">
+        <h2 class="hover-effect-title"><i class="fas fa-pencil-ruler text-primary"></i> Design</h2>
+        <p>Prism features:</p>
+        <ul>
+            <li>🏍️ Real-time object detection (on glasses + phone)</li>
+            <li>📊 Price comparison overlays</li>
+            <li>🗣️ CarterAI voice assistant (natural language)</li>
+            <li>⚙️ Personalization: nutrition tags, visual contrast, text size</li>
+        </ul>
+        <div class="text-center my-4">
+            <img src="/static/img/prototype.jpg" alt="Prototype UI" class="img-fluid rounded shadow" style="max-width: 600px;">
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <h2 class="hover-effect-title"><i class="fas fa-rocket text-primary"></i> Deliver</h2>
+        <p>Prism is deployed as a working web app and connected to a Raspberry Pi-powered AR headset prototype. Users can interact with CarterAI through voice or tap, customize overlays via mobile, and access synced shopping history across devices.</p>
+        <div class="text-center mb-3">
+            <iframe style="border: 1px solid rgba(0,0,0,0.1); width: 100%; height: 500px;"
+                src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/XFwqtYL66bEljylbhJ2JUm/prism?pageid=47%3A67&node-id=50-19087&scaling=scale-down"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <h2 class="hover-effect-title"><i class="fas fa-check-circle text-primary"></i> Evaluation</h2>
+        <p>Five users tested Prism across real environments. Key takeaways:</p>
+        <ul>
+            <li>✅ Scanning and CarterAI were easy and intuitive</li>
+            <li>❌ 'Buy' button caused confusion — users expected checkout</li>
+            <li>🛠️ Needed clearer access to cart, compare, and onboarding</li>
+        </ul>
+        <blockquote class="quote-box">
+            <p>“It was super easy to scan — I liked that.”</p>
+            <footer>– P1</footer>
+        </blockquote>
+        <blockquote class="quote-box">
+            <p>“I couldn’t find a delete option to take things out of the cart.”</p>
+            <footer>– P3</footer>
+        </blockquote>
+    </div>
+</section>
+
+<section class="py-5 text-center">
+    <h2 class="text-primary mb-4">CarterAI and AR Glasses</h2>
+    <img src="/static/img/Carter.png" alt="CarterAI" class="img-fluid" style="max-width: 150px;">
+    <p class="mt-2">CarterAI offers real-time responses, voice navigation, and humor — available on both mobile and AR glasses.</p>
+
+</section>
+
+<style>
+/* Mobile-first layout for Prism timeline */
+.timeline {
+    border-left: 2px solid #007bff;
+    padding-left: 12px;
+    margin-top: 1.5rem;
+}
+.timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 0.5rem;
+}
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+.quote-box {
+    background-color: #f8f9fa;
+    border-left: 3px solid #007bff;
+    padding: 0.75rem 1rem;
+    font-style: italic;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+.quote-box footer {
+    font-weight: bold;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+}
+.display-5 {
+    font-size: 1.75rem;
+}
+.lead {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+img.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.container .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.75rem;
+}
+
+/* Desktop scaling (768px+) */
+@media (min-width: 768px) {
+    .timeline {
+        padding-left: 20px;
+        border-left: 4px solid #007bff;
+    }
+    .timeline-item::before {
+        width: 20px;
+        height: 20px;
+        left: -12px;
+    }
+    .display-5 {
+        font-size: 2.5rem;
+    }
+    .lead {
+        font-size: 1.25rem;
+    }
+    .container .btn {
+        display: inline-block;
+        width: auto;
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+    .quote-box {
+        font-size: 1rem;
+    }
+}
+</style>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - Nick Menough{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <h1 class="mb-5 text-center">My Prototypes</h1>
+        <div class="row">
+            <!-- Card 1: SiloGuard -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="/static/img/logo1.png" class="card-img-top" alt="SiloGuard Logo">
+                    <div class="card-body">
+                        <h5 class="card-title">SiloGuard</h5>
+                        <p class="card-text">SiloGuard is a temperature monitoring system designed to provide real-time data for grain storage in silos. Click below to visit the project website.</p>
+                        <a href="https://hci584.pythonanywhere.com/" class="btn btn-primary" target="_blank">Visit SiloGuard</a>
+                        <a href="/static/img/siloguard.pdf" class="btn btn-secondary" target="_blank">About SiloGuard (PDF)</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Embedded Video: Animation -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">SiloGuard Video</h5>
+                        <p class="card-text">Rendered video of SiloGuard created with Blender and Twin Motions</p>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/aCxSnePXov4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: MyPantry -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="/static/img/logo.png" class="card-img-top" alt="MyPantry Logo">
+                    <div class="card-body">
+                        <h5 class="card-title">MyPantry</h5>
+                        <p class="card-text">MyPantry helps users track food inventory and reduce waste. Click below to visit the project website or view the GitHub repository for the source code.</p>
+                        <a href="https://menough00.pythonanywhere.com/" class="btn btn-primary" target="_blank">Visit MyPantry</a>
+                        <a href="https://github.com/menough00/Mypantrry.com" class="btn btn-dark" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Project Dropdown (for future projects) - Centered -->
+            <div class="col-lg-12 d-flex justify-content-center mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Future Prototypes Comming Soon</h5>
+                        <p class="card-text">Select a project from the dropdown below to explore.</p>
+                        <select class="form-select" id="projectDropdown" aria-label="Project select">
+                            <option selected>Select Project</option>
+                            <option value="starship">Starship Game(Web based)</option>
+                            <option value="vehisure">Vehisure (ISO App)</option>
+                            <option value="healthcare">Digital Healthcare</option>
+                        </select>
+                        <button class="btn btn-primary mt-3" id="exploreBtn">Explore Project</button>
+                        <!-- Add this script to handle the dropdown selection and navigation -->
+<script>
+    document.getElementById("exploreBtn").addEventListener("click", function() {
+        const selectedProject = document.getElementById("projectDropdown").value;
+    
+        if (selectedProject === "starship") {
+            window.open("https://spaceshipweb.pythonanywhere.com/", '_blank');
+        } else if (selectedProject === "vehisure" || selectedProject === "healthcare") {
+            alert("This project is coming soon!");
+        }
+    });
+    
+</script>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Nick Menough{% endblock %}
+{% block meta %}
+<meta name="description" content="Welcome to the portfolio of Nick (Nicholas Clark) Menough – HCI graduate, UX engineer, and full-stack developer. Explore award-winning AR, AI, and design projects.">
+<meta name="keywords" content="Nick Menough, Nicholas Menough, Nicholas Clark Menough, UX Portfolio, HCI, AR Prototypes, AI Shopping Assistant, Iowa State, Cyberscend, Software Engineer">
+{% endblock %}
+
+{% block content %}
+<section class="hero py-5">
+    <div class="container text-center text-white">
+        <h1 class="display-4 mb-4">Hi, I'm Nick Menough</h1>
+        <p class="lead">
+            I'm a passionate <strong>Software Engineer</strong> and <strong>Human-Computer Interaction Graduate</strong> with a deep love for <strong>innovation</strong>.
+            With years of experience in building interactive applications and designing intuitive user experiences,
+            I’m always seeking creative solutions to complex problems.
+        </p>
+        <p class="lead">
+            Whether I’m developing <strong>cutting-edge prototypes</strong> or exploring <strong>new design concepts</strong>,
+            my work is driven by a passion for turning ideas into reality and ensuring user-centered designs.
+        </p>
+        
+    </div>
+</section>
+
+<section class="projects-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Explore My Work</h2>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+    <div class="card">
+        <img src="/static/img/workvia.png" class="card-img-top" alt="Workiva UX Challenge">
+        <div class="card-body text-center">
+            <h5 class="card-title">AI Anomaly Detection – Workiva</h5>
+            <p class="card-text">Our Usabilathon-winning UX challenge: designing explainable AI to support spreadsheet users.</p>
+            <a href="/usabilathonWorkvia" class="btn btn-primary">View Case Study</a>
+        </div>
+    </div>
+</div>
+<!-- Prism AR Capstone Card -->
+<div class="col-lg-4 col-md-6">
+    <div class="card">
+        <img src="/static/img/prismlogo.png" class="card-img-top" alt="Prism Logo" style="object-fit: contain; max-height: 250px; background-color: #f9f9f9;">
+        <div class="card-body text-center">
+            <h5 class="card-title">Prism AR Capstone</h5>
+            <p class="card-text">Explore how Prism combines AI and AR to support inclusive, real-time shopping—via glasses or your smartphone.</p>
+            <a href="/prism" class="btn btn-primary">View Prism Project</a>
+        </div>
+    </div>
+</div>
+
+            
+            <!-- VehiSure Card with Carousel -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div id="vehisureCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="/static/img/fig4.png" class="d-block w-100" alt="Figma Wireframes">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/static/img/fig5.png" class="d-block w-100" alt="Figma Wireframes">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/static/img/fig6.png" class="d-block w-100" alt="Figma Wireframes">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#vehisureCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#vehisureCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">UX Wireframes: VehiSure</h5>
+                        <p class="card-text">Explore the wireframe and storyboard for VehiSure's automotive inspection app designed to streamline the inspection process.</p>
+                        <a href="/vehisure" class="btn btn-primary">VehiSure Design</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SiloGuard Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <img src="/static/img/site2.png" class="card-img-top" alt="Website Prototypes">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Website Prototype: SiloGuard</h5>
+                        <p class="card-text">SiloGuard: Revolutionizing Grain Bin Monitoring.</p>
+                        <div class="d-flex justify-content-center gap-2">
+                            <a href="https://hci584.pythonanywhere.com/" class="btn btn-primary" target="_blank">Visit Siloguard</a>
+                            <a href="/siloguard" class="btn btn-secondary" target="_blank">Silogurad Design</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100">
+        <img src="/static/img/pets2.png" class="card-img-top" alt="petsARus Logo" style="max-height: 200px; object-fit: contain;">
+        <div class="card-body text-center">
+            <h5 class="card-title" style="color: #e67e22; font-weight: bold;">petsARus: AR Pet Adventure</h5>
+            <p class="card-text small">
+                Play, feed, and bond with animated pets in AR using voice commands, toys, and treats. Built for mobile. Discover how we brought Nintendogs + Tamagotchi into the real world!
+            </p>
+            <a href="/pets" class="btn btn-primary btn-sm">
+                <i class="fas fa-paw"></i> View Project
+            </a>
+        </div>
+    </div>
+</div>
+
+
+            <!-- MyPantry Card with Embedded iframe -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <iframe src="https://menough00.pythonanywhere.com/" class="card-img-top" style="width: 100%; height: 300px; border: none;" allowfullscreen></iframe>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Website Prototype: MyPantry</h5>
+                        <p class="card-text">Check out my MyPantry, showcasing a responsive and user-friendly prototype for household inventory control.</p>
+                        <a href="https://menough00.pythonanywhere.com/" class="btn btn-secondary" target="_blank">Visit MyPantry</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SiloGuard Video Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">SiloGuard Video</h5>
+                        <p class="card-text">Rendered video of SiloGuard created with Blender and Twin Motions.</p>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/aCxSnePXov4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- SmartCart Card with Carousel -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div id="vehisureCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="/static/img/cart1.png" class="d-block w-100" alt="Figma Wireframes">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/static/img/cart2.png" class="d-block w-100" alt="Figma Wireframes">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/static/img/cart3.png" class="d-block w-100" alt="Figma Wireframes">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/static/img/cart4.png" class="d-block w-100" alt="Figma Wireframes">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#vehisureCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#vehisureCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Design Systems: SmartCart</h5>
+                        <p class="card-text">Explore SmartCart is an innovative grocery shopping assistant designed to streamline and enhance the shopping experience through AI-driven recommendations, AR-powered navigation, and a consistent design system.</p>
+                        <a href="/smartcart" class="btn btn-primary">SmartCart Design</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div id="vehisureCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="/static/img/fig2.png" class="d-block w-100" alt="Figma Wireframes">
+                            </div>
+                          
+                 
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Digital Transformation Project:Amcne</h5>
+                        <p class="card-text">Explore how Amcne. Inc is revolutionizing the healthcare industry with cutting-edge digital transformation.</p>
+                        <a href="/smartcart" class="btn btn-primary">Healthcare Design</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Designs - Nick Menough{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <h1 class="mb-5 text-center">My Designs</h1>
+        <div class="row">
+            <!-- Card 1: Figma Prototype and PDF Link -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="/static/img/fig1.png" class="card-img-top" alt="VehiSure Dashboard Prototype"style="width: 100%; height: auto; max-width: 200px;">
+                    <div class="card-body">
+                        <h5 class="card-title">VehiSure Automotive Inspection Concept</h5>
+                        <p class="card-text">This concept showcases the VehiSure automotive inspection dashboard, allowing inspectors to log in, access inspections, and view previous reports. The inspector can also navigate between inspections, add new ones, and communicate with drivers.</p>
+                        <a href="https://www.figma.com/proto/F4R1Lhlqie5CV4Wm3owl77/Prototype?node-id=0-1&t=LVOy8MMOt5Rt26VK-1" class="btn btn-primary mb-2" target="_blank">View Wireframe on Figma</a>
+                        <a href="/static/img/Updatedstoryboard.pdf" class="btn btn-secondary" target="_blank">View Storyboard (PDF)</a>
+                    </div>
+                </div>
+            </div>
+
+<!-- Card 2: Amcne. Inc Digital Transformation -->
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="card">
+        <img src="/static/img/fig2.png" class="card-img-top" alt="Amcne Inc. Digital Transformation" style="width: 100%; height: auto; max-width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">Amcne. Inc Digital Transformation in the Healthcare Industry</h5>
+            <p class="card-text">Explore how Amcne. Inc is revolutionizing the healthcare industry with cutting-edge digital transformation. Click below to view the sidedeck or the Figma prototype.</p>
+            <a href="https://www.canva.com/design/DAGSSJvDbkw/PnngWi8HSZ9KFv_bP22RAg/edit?utm_content=DAGSSJvDbkw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn btn-secondary mb-2" target="_blank">View Sidedeck</a>
+            <a href="https://www.figma.com/proto/AZwPOCeoa7zyAMafy9BvXb/Delivering-systems?page-id=0%3A1&node-id=29-11640&node-type=canvas&viewport=302%2C385%2C0.26&t=6LBe3g7OnSPwEpRw-1&scaling=scale-down&content-scaling=fixed" class="btn btn-primary" target="_blank">View on Figma</a>
+        </div>
+    </div>
+</div>
+
+            <!-- Card 3: Add Future Project 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="/static/img/comingsoon.png" class="card-img-top img-fluid" alt="Figma Prototype"style="width: 100%; height: auto; max-width: 200px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Figma Prototype: Delivering Systems</h5>
+                        <p class="card-text">Explore this interactive system delivery prototype designed using Figma. You can also view the updated storyboard in PDF format. Click below to open the Figma project or the storyboard PDF.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

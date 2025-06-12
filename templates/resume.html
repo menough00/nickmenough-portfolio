@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block meta %}
+<meta name="description" content="Explore Nick Menough’s resume featuring experience in UX design, software engineering, and HCI research.">
+<meta name="keywords" content="Nick Menough resume, UX engineer, software developer, HCI, Iowa State University, Cyberscend, Heartland Co-op, full-stack developer">
+<meta name="author" content="Nick Menough">
+{% endblock %}
+{% block title %}Resume - Nick Menough{% endblock %}
+
+{% block content %}
+<section class="resume-section py-4 px-3 px-md-5" id="about">
+    <div class="resume-section-content">
+        <h1 class="mb-2 fs-2 fs-md-1 text-center text-md-start">
+            Nicholas <span class="text-primary">Menough</span>
+        </h1>
+        <div class="subheading mb-3 text-center text-md-start small">
+            <a href="tel:+15159881509" class="text-decoration-none text-dark me-2 d-block d-md-inline">
+                <i class="fas fa-phone-alt"></i> (515) 988-1509
+            </a>
+            <a href="mailto:nickmenough@gmail.com" class="text-decoration-none text-dark me-2 d-block d-md-inline">
+                <i class="fas fa-envelope"></i> nickmenough@gmail.com
+            </a>
+            <a href="https://nickmenough.pythonanywhere.com" class="text-decoration-none text-dark d-block d-md-inline">
+                <i class="fas fa-globe"></i> nickmenough.pythonanywhere.com
+            </a>
+        </div>
+        <p class="lead fs-6 fs-md-5 mb-4">
+            Human-Computer Interaction (HCI) graduate and Software Engineer with a strong background in full-stack development and user-centered research. Experienced in real-world UX/UI projects and advanced coursework in prototyping and usability. Proficient in Figma, contextual inquiry, and usability testing, with 18 months of applied UX research and design in a research and development environment. Passionate about crafting intuitive, accessible digital experiences that align technical solutions with real user needs.
+        </p>
+        <div class="social-icons mb-4 text-center text-md-start">
+            <a class="social-icon me-2" href="https://www.linkedin.com/in/nick-menough-38b5225b/"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social-icon me-2" href="https://www.github.com/menough00"><i class="fab fa-github"></i></a>
+            <a class="social-icon" href="https://twitter.com/papageorgio79"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</section>
+
+<hr class="m-0" />
+
+<section class="resume-section py-4 px-3 px-md-5" id="experience">
+    <div class="resume-section-content">
+        <h2 class="mb-4 text-center text-md-start">Experience</h2>
+
+        {% for job in [
+            {
+                "title": "Cyberscend",
+                "role": "UX Designer / Developer / Researcher",
+                "location": "Remote · Lorton, VA HQ",
+                "dates": "April 2023 – Present",
+                "url": "https://www.cyberscend.com",
+                "bullets": [
+                    "Led UX research and full-stack development for an Azure-hosted Asset Management application.",
+                    "Conducted user interviews, built medium-fidelity prototypes in Figma, and led iterative usability testing.",
+                    "Built secure, scalable apps using .NET Core, Python, and Kendo UI in Azure cloud environments.",
+                    "Developed CI/CD pipelines and collaborated cross-functionally during agile design sprints."
+                ]
+            },
+            {
+                "title": "Heartland Co-op",
+                "role": "UX Designer / Developer / Researcher",
+                "location": "West Des Moines, IA",
+                "dates": "Jan 2022 – Apr 2023",
+                "url": "https://www.heartlandcoop.com",
+                "bullets": [
+                    "Designed a real-time grain monitoring dashboard for 1,500+ bins using Flask, React, and DB2.",
+                    "Gathered user insights from field staff and farmers to refine UI/UX design and workflows.",
+                    "Developed responsive, mobile-first components with Kendo UI and RESTful API integrations."
+                ]
+            },
+            {
+                "title": "Prodigy Development & Marketing",
+                "role": "Web Developer Freelancer",
+                "location": "Grimes, IA",
+                "dates": "2018 – 2024",
+                "bullets": [
+                    "Created e-commerce and enterprise tools using React, Python, Node.js, and Bootstrap.",
+                    "Implemented reusable UI components and structured MongoDB/MySQL data backends."
+                ]
+            },
+            {
+                "title": "CMG Financial",
+                "role": "Loan Officer",
+                "location": "",
+                "dates": "2016 – 2018",
+                "bullets": [
+                    "Built CRM integrations and hosted client workshops, improving referrals and sales."
+                ]
+            },
+            {
+                "title": "Elite Insurance / US Cellular",
+                "role": "Insurance Agent / Tech Support",
+                "location": "",
+                "dates": "2007 – 2016",
+                "bullets": [
+                    "Received President’s Sales Awards at both companies for top-tier customer performance."
+                ]
+            }
+        ] %}
+        <div class="mb-5">
+            <h3 class="mb-1">
+                {% if job.url %}
+                <a href="{{ job.url }}" class="text-primary text-decoration-none" target="_blank">{{ job.title }}</a>
+                {% else %}
+                <span class="text-primary">{{ job.title }}</span>
+                {% endif %}
+            </h3>
+            <div class="subheading mb-1">{{ job.role }}</div>
+            {% if job.location or job.dates %}
+            <div class="text-muted small mb-2">{{ job.location }}{% if job.location and job.dates %} · {% endif %}{{ job.dates }}</div>
+            {% endif %}
+            <ul class="mb-0">
+                {% for item in job.bullets %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<hr class="m-0" />
+
+<section class="resume-section py-4 px-3 px-md-5" id="education">
+    <div class="resume-section-content">
+        <h2 class="mb-4 text-center text-md-start">Education</h2>
+
+        {% for school in [
+            {"name": "Iowa State University", "degree": "MS in Human-Computer Interaction", "details": "Expected May 2025 · GPA: 3.91"},
+            {"name": "Upper Iowa University", "degree": "BS in Software Engineering", "details": "Magna cum laude · GPA: 3.81"},
+            {"name": "Des Moines Area Community College", "degree": "Associate of Science, Information Computer Systems", "details": "May 2021"}
+        ] %}
+        <div class="mb-4">
+            <h3 class="mb-0">{{ school.name }}</h3>
+            <div class="subheading mb-1">{{ school.degree }}</div>
+            <div class="text-muted small">{{ school.details }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
